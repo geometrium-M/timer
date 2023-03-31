@@ -1,0 +1,10 @@
+.wrapper {
+  width: 20px;
+  height: 20px;
+  border: 1px solid red;
+}
+.wrapper__block {
+  width: 10px;
+  height: 10px;
+  border: 1px solid green;
+}/*# sourceMappingURL=styles.css.map */

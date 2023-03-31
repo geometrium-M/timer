@@ -1,0 +1,11 @@
+.wrapper {
+  width: 20px;
+  height: 20px;
+  border: 1px solid red;
+  
+  &__block {
+    width: 10px;
+    height: 10px;
+    border: 1px solid green;
+  }
+}
