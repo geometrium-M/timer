@@ -1,11 +1,13 @@
-.wrapper {
-  width: 20px;
-  height: 20px;
-  border: 1px solid red;
-  
-  &__block {
-    width: 10px;
-    height: 10px;
-    border: 1px solid green;
-  }
+$cover-color: rgb(152, 198, 241);
+$white-color: white;
+
+body {
+  background: $cover-color;
+  background: linear-gradient(270deg, $cover-color 0%, $white-color 100%);
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

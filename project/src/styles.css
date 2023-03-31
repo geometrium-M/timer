@@ -1,10 +1,10 @@
-.wrapper {
-  width: 20px;
-  height: 20px;
-  border: 1px solid red;
-}
-.wrapper__block {
-  width: 10px;
-  height: 10px;
-  border: 1px solid green;
+body {
+  background: rgb(152, 198, 241);
+  background: linear-gradient(270deg, rgb(152, 198, 241) 0%, white 100%);
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=styles.css.map */

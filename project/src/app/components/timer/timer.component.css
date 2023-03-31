@@ -1,0 +1,63 @@
+.wrapper {
+  background-color: black;
+  width: 50rem;
+  height: auto;
+  border-radius: 1.5rem;
+  padding: 20px 0;
+}
+.wrapper__timer {
+  display: flex;
+  justify-content: center;
+}
+.wrapper .timer__minutes, .wrapper .timer__seconds, .wrapper .timer__milliseconds {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 16rem;
+  height: 10rem;
+}
+.wrapper .timer__title {
+  font-size: 130px;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+}
+.wrapper .timer__title span {
+  font-size: 3.5rem;
+  font-weight: 500;
+  margin-left: 5px;
+  color: rgb(152, 198, 241);
+}
+.wrapper .timer__actions button {
+  border: none;
+  font-size: 2.8rem;
+  width: 3rem;
+  margin: 0 10px;
+  border-radius: 10px;
+  color: rgb(152, 198, 241);
+  background-color: black;
+}
+.wrapper .timer__actions button:hover {
+  background-color: rgb(53, 50, 50);
+  cursor: pointer;
+}
+.wrapper .action {
+  margin-top: 5rem;
+}
+.wrapper .action button {
+  border-radius: 20px;
+  border: none;
+  color: rgb(152, 198, 241);
+  background-color: black;
+}
+.wrapper .action button .mat-icon {
+  font-size: 5rem;
+  width: 6.5rem;
+  height: 5.5rem;
+}
+.wrapper .action button:hover {
+  background-color: rgb(53, 50, 50);
+  transition: 0.6s;
+  transform: scale(0.8);
+  cursor: pointer;
+}/*# sourceMappingURL=timer.component.css.map */
