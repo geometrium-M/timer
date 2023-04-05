@@ -38,26 +38,70 @@
   background-color: black;
 }
 .wrapper .timer__actions button:hover {
-  background-color: rgb(53, 50, 50);
+  background-color: rgb(107, 100, 100);
   cursor: pointer;
 }
 .wrapper .action {
-  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+  width: 220px;
+  margin: 40px auto;
+}
+.wrapper .action button.disabled {
+  background-color: rgb(175, 191, 204);
+  color: rgb(112, 109, 109);
+}
+.wrapper .action button.disabled:hover {
+  background-color: rgb(175, 191, 204);
+  transition: none;
+  transform: none;
 }
 .wrapper .action button {
-  border-radius: 20px;
+  border-radius: 10px;
   border: none;
-  color: rgb(152, 198, 241);
-  background-color: black;
-}
-.wrapper .action button .mat-icon {
-  font-size: 5rem;
-  width: 6.5rem;
-  height: 5.5rem;
+  color: black;
+  background-color: rgb(152, 198, 241);
+  height: 50px;
+  width: 100px;
+  font-size: 20px;
 }
 .wrapper .action button:hover {
-  background-color: rgb(53, 50, 50);
-  transition: 0.6s;
-  transform: scale(0.8);
+  background-color: rgb(107, 100, 100);
+  transition: 0.5s;
+  transform: scale(0.9);
   cursor: pointer;
+}
+.wrapper .lap-timer {
+  width: 45%;
+  color: white;
+  font-size: 60px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.wrapper .lap-timer span {
+  font-size: 30px;
+  margin-left: 5px;
+  color: rgb(152, 198, 241);
+}
+
+.table {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-size: 24px;
+}
+.table table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+.table table td {
+  width: 30%;
+  margin: 0 auto;
+  padding: 10px;
+}
+.table__header {
+  border-bottom: 1px solid rgb(107, 100, 100);
+  color: rgb(107, 100, 100);
 }/*# sourceMappingURL=timer.component.css.map */

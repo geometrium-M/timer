@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { interval } from 'rxjs';
+import { TimerService } from './services/timer.service';
 
 @Component({
   selector: 'app-root',
@@ -7,15 +8,19 @@ import { interval } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  constructor(private timerService:TimerService){
+    this.list = this.timerService.list
+  }
   title = 'project';
+  type:string = ''
+  list:any
 
   ngOnInit() {
-    const obj = interval(1000)
+  }
 
-    obj.subscribe((d)=>{
-      console.log(d)
-    })
-
+  setType(type:string) {
+    this.type = type
+    console.log(type)
   }
   
 }

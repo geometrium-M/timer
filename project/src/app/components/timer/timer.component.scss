@@ -1,5 +1,5 @@
 $base-color: black;
-$base-color-light:rgb(53, 50, 50);
+$base-color-light:rgb(107, 100, 100);
 $cover-color: rgb(152, 198, 241);
 $white-color:white;
 
@@ -61,27 +61,80 @@ $white-color:white;
   }
 
   .action {
-    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    width: 220px;
+    margin: 40px auto;
 
-    
-    button {
-      border-radius: 20px;
-      border: none;
-      color: $cover-color;
-      background-color: $base-color;
+    button.disabled {
+      background-color:  rgb(175, 191, 204);
+      color: rgb(112, 109, 109);
 
-      & .mat-icon {
-        font-size: 5rem;
-        width: 6.5rem;
-        height: 5.5rem;
+      &:hover {
+        background-color:  rgb(175, 191, 204);
+        transition: none;
+        transform: none;
       }
+    }
+
+    button {
+      border-radius: 10px;
+      border: none;
+      color: $base-color;
+      background-color: $cover-color;
+      height: 50px;
+      width: 100px;
+      font-size: 20px;
 
       &:hover {
         background-color: $base-color-light;
-        transition: 0.6s;
-        transform: scale(0.8);
+        transition: 0.5s;
+        transform: scale(0.9);
         cursor: pointer;
       }
     }
   }
+
+  .lap-timer {
+    width: 45%;
+    color: white;
+    font-size: 60px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    
+
+    & span {
+      font-size: 30px;
+      margin-left: 5px;
+      color: $cover-color;
+    }
+  }
 }
+
+
+.table {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-size: 24px;
+  
+  table {
+    width: 100%; 
+    border-collapse: collapse;
+    text-align: center;
+
+    td {
+      width: 30%;
+      margin: 0 auto;
+      padding: 10px;
+    }
+  }
+
+  &__header {
+    border-bottom: 1px solid $base-color-light;
+    color: $base-color-light;
+  }
+}
+
+

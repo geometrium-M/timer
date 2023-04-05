@@ -1,30 +1,53 @@
 <div class="wrapper">
   <div class="wrapper__timer timer">
     <div class="timer__minutes">
-      <div class="timer__title">{{minutes | number: '2.0'}}<span>h</span></div>
-      <div class="timer__actions">
-        <button>-</button>
-        <button>+</button>
-      </div>
+      <div class="timer__title">{{minutes | number: '2.0'}}<span>m</span></div>
     </div>
     <div class="timer__seconds">
-      <div class="timer__title">{{seconds | number:'2.0'}}<span>m</span></div>
-      <div class="timer__actions">
-        <button>-</button>
-        <button>+</button>
-      </div>
+      <div class="timer__title">{{seconds | number:'2.0'}}<span>s</span></div>
     </div>
     <div class="timer__milliseconds">
-      <div class="timer__title">{{milliseconds}}<span>s</span></div>
-      <div class="timer__actions">
-        <button>-</button>
-        <button>+</button>
-      </div>
+      <div class="timer__title">{{milliseconds | number:'2.0'}}<span>ms</span></div>
+    </div>
+  </div>
+  <div>
+    <div *ngIf="lapShow" class="wrapper__timer lap-timer">
+      <div>{{lapMinutes | number: '2.0'}}<span>m</span></div>
+      <div>{{lapSeconds | number: '2.0'}}<span>s</span></div>
+      <div>{{lapMilliseconds | number: '2.0'}}<span>ms</span></div>
     </div>
   </div>
   <div class="wrapper__timer action">
-    <button (click)="start()"><mat-icon>play_arrow</mat-icon></button>
-    <button><mat-icon>stop</mat-icon></button>
-    <button><mat-icon>replay</mat-icon></button>
+    <ng-container [ngTemplateOutlet]="startBtn ? first : stopBtn ? second : third"></ng-container>
+    <ng-template #first>
+      <button [disabled]="true" class="disabled">Lap</button>
+      <button (click)="start()">Start</button>
+    </ng-template>
+    <ng-template #second>
+      <button [disabled]="false" [ngStyle]="{'cursor':'pointer'}" (click)="lap()">Lap</button>
+      <button (click)="stop()">Stop</button>
+    </ng-template>
+    <ng-template #third>
+      <button (click)="reset()">Reset</button>
+      <button (click)="start()">Resume</button>
+    </ng-template>
   </div>
 </div>
+
+<div *ngIf="list.length" class="table">
+  <table>
+    <tr class="table__header">
+      <td>Lap</td>
+      <td>Lap times</td>
+      <td>Overall time</td>
+    </tr>
+    <tbody *ngFor="let el of list; let indx = index">
+      <tr>
+        <td>{{indx}}</td>
+        <td>{{el.lap | timer}}</td>
+        <td>{{el.overall | timer}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
